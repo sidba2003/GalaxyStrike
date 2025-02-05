@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] ParticleSystem destructionVFX;
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("The player just collided with " + other.gameObject.name);
+        Instantiate(destructionVFX, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
