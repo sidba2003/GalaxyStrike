@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -16,7 +18,7 @@ public class Enemy : MonoBehaviour
     {
         hitPoints--;
 
-        if (hitPoints <= 0)
+        if (hitPoints == 0)
         {
             scoreboard.increaseScore();
 

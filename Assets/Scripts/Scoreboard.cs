@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Scoreboard : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreBoard;
+    [SerializeField] TMP_Text scoreBoard;
 
     int score = 0;
     public static Scoreboard instance;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
     }
